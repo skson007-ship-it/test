@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세상과 통하는 즐거움! 시니어 스마트폰 교실</title>
+    <style>
+        /* 페이지 전체에 부드러운 스크롤 효과 적용 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 전체적인 스타일 */
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; /* 가독성 좋은 폰트 */
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* 편안한 연회색 배경 */
+            color: #343a40; /* 너무 진하지 않은 검정 글씨 */
+            line-height: 1.8; /* 넉넉한 줄 간격 */
+        }
+
+        /* 상단 고정 메뉴 (내비게이션) */
+        nav {
+            background-color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky; /* 스크롤しても 상단에 고정 */
+            top: 0;
+            z-index: 1000; /* 다른 요소들 위에 보이도록 */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-bottom: 3px solid #007BFF;
+        }
+        nav a {
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 1.4em; /* 메뉴 글씨를 매우 크게 */
+            font-weight: bold;
+            margin: 0 20px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        /* 머리말 (헤더) */
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://via.placeholder.com/1200x500.png?text=활짝+웃는+시니어+수강생들');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3.5em; /* 제목을 아주 크게 */
+            margin: 0;
+            font-weight: 900;
+        }
+        header p {
+            font-size: 1.5em; /* 부제목도 크게 */
+            margin-top: 10px;
+        }
+
+        /* 본문 영역 */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto; /* 중앙 정렬 */
+        }
+        
+        /* 각 구역(섹션) 스타일 */
+        section {
+            background-color: white;
+            margin-bottom: 40px;
+            padding: 40px;
+            border-radius: 15px; /* 모서리를 더욱 부드럽게 */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* 그림자 효과 */
+            border-top: 5px solid #007BFF; /* 각 섹션 상단에 포인트 색상 */
+        }
+        
+        h2 {
+            font-size: 2.5em; /* 소제목도 아주 크게 */
+            color: #333;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        p, li {
+            font-size: 1.25em; /* 본문 글씨를 더 크게 */
+        }
+
+        /* 이미지 및 동영상 스타일 */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* 이미지 모서리 둥글게 */
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 비율 유지 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 크고 눈에 띄는 버튼 스타일 */
+        .button-wrapper {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #28a745; /* 성공과 신뢰를 주는 초록색 */
+            color: white;
+            padding: 20px 40px; /* 버튼을 더욱 크게 */
+            font-size: 1.6em; /* 버튼 글씨도 더욱 크게 */
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: transform 0.2s; /* 클릭 효과 */
+        }
+        
+        .button:hover {
+            transform: scale(1.05); /* 마우스를 올리면 살짝 커지는 효과 */
+        }
+        
+        /* 꼬리말 (푸터) */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 메뉴 -->
+    <nav>
+        <a href="#intro">수업 소개</a>
+        <a href="#apply">신청 방법</a>
+        <a href="#reviews">수강 후기</a>
+        <a href="#location">오시는 길</a>
+    </nav>
+
+    <!-- 머리말: 홈페이지의 얼굴 -->
+    <header>
+        <h1>스마트폰, 세상과 통하는 즐거움!</h1>
+        <p>두려움은 설렘으로, 어려움은 쉬움으로 바꿔드립니다.</p>
+    </header>
+
+    <!-- 본문: 주요 내용 -->
+    <main>
+        <!-- 1. 교육 소개 섹션 -->
+        <section id="intro">
+            <h2>무엇을 배울까요?</h2>
+            <p>스마트폰 켜고 끄는 기초부터, 자녀와 영상통화하고 친구들과 여행 사진을 공유하는 즐거움까지! 어르신들의 눈높이에 맞춰 하나하나 차근차근 알려드립니다.</p>
+            <img src="https://via.placeholder.com/800x450.png?text=친절한+강사님이+1:1로+알려주는+모습" alt="강사가 수강생에게 스마트폰 사용법을 친절히 알려주는 모습">
+            <ul>
+                <li><strong>카카오톡:</strong> 자녀, 친구와 메시지, 사진, 동영상 주고받기</li>
+                <li><strong>유튜브:</strong> 좋아하는 노래, 건강 정보, 지난 방송 다시보기</li>
+                <li><strong>카메라:</strong> 멋진 풍경, 사랑하는 손주 사진 예쁘게 찍고 꾸미기</li>
+                <li><strong>생활 앱:</strong> 버스 시간 확인, 날씨 보기, 은행 업무 등 편리한 기능</li>
+            </ul>
+        </section>
+
+        <!-- 2. 수업 신청 안내 섹션 -->
+        <section id="apply">
+            <h2>수업 신청, 어렵지 않아요!</h2>
+            <p>지금 바로 전화 한 통이면 모든 준비가 끝납니다. 궁금한 점이 있으시면 무엇이든 편하게 물어보세요. 친절하게 상담해 드립니다.</p>
+            <img src="https://via.placeholder.com/800x450.png?text=전화로+쉽고+빠르게+수업+신청" alt="상담원이 미소 지으며 전화를 받는 모습">
+            <div style="text-align:center; margin-top:30px; background-color:#e9ecef; padding: 20px; border-radius: 10px;">
+                <p style="font-size:1.5em; margin:0;">지금 바로 전화주세요!</p>
+                <p style="font-size:2.5em; font-weight:bold; color:#dc3545; margin:0;">☎️ 02-1234-5678</p>
+            </div>
+            <div class="button-wrapper">
+                <a href="tel:02-1234-5678" class="button">전화 걸어서 신청하기</a>
+            </div>
+        </section>
+        
+        <!-- 3. 수강생 후기 섹션 (동영상 포함) -->
+        <section id="reviews">
+            <h2>먼저 체험한 분들의 생생한 이야기</h2>
+            <p>"답답하기만 했던 벽돌이 이제는 요술 상자가 됐어요. 손주랑 매일 영상통화하는 재미에 푹 빠졌답니다." - 박순자 (72세)</p>
+            <p>"친구들이 단체 톡방에 보낸 사진만 구경했는데, 이제는 내가 찍은 꽃 사진을 자랑할 수 있어 정말 기쁩니다." - 이철민 (68세)</p>
+            <!-- 실제 수강생 인터뷰나 수업 스케치 영상을 넣으면 좋습니다 -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- 4. 오시는 길 섹션 -->
+        <section id="location">
+            <h2>찾아오시는 길</h2>
+            <p>대중교통으로도 쉽게 찾아오실 수 있는 곳에 위치하고 있습니다. 아래 지도를 확인하시고 편하게 방문해주세요.</p>
+            <!-- 구글 지도 '퍼가기' 코드를 아래에 붙여넣으세요 -->
+            <div class="video-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.983935933333!2d126.97796911529748!3d37.55626347979989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca268f773f329%3A0x840b3b455c165d4c!2z7Iug7ZmY6rSA!5e0!3m2!1sko!2skr!4v1671234567890" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p style="font-size:1.3em; text-align:center; margin-top:20px;"><strong>주소:</strong> 서울특별시 행복구 디지털로 123, 행복빌딩 5층</p>
+        </section>
+
+    </main>
+
+    <!-- 꼬리말 -->
+    <footer>
+        <p><strong>시니어 스마트폰 교실</strong></p>
+        <p>문의: 02-1234-5678 | 이메일: happy@smartsenior.com</p>
+        <p>&copy; 2025 스마트 시니어 교실. 모든 권리 보유.</p>
+    </footer>
+
+</body>
+</html>
